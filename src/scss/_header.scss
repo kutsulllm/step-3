@@ -1,0 +1,392 @@
+.fork-app {
+    background-image: url(../img/fork-app-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+    &-img-text {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 3;
+    }
+
+    .fork-app-logo-img:hover {
+        cursor: pointer;
+        filter: brightness(0) invert(1);
+
+    }
+
+    .fork-app-logo-text:hover {
+        cursor: pointer;
+        color: $white;
+    }
+
+    &-menu {
+        color: $purple;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 18px;
+
+        li {
+            position: relative;
+            color: $purple;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-weight: 700;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+
+    }
+
+    &-menu {
+        li:hover {
+            cursor: pointer;
+            color: $white;
+
+        }
+    }
+
+    .fork-app-button:hover {
+        color: #8D81AC;
+        background-color: $white;
+        border: 1px solid #8D81AC;
+    }
+
+    &-top {
+        width: 100%;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        position: relative;
+    }
+
+    &-logo-text {
+        text-align: right;
+        margin-left: 15px;
+        font-weight: 700;
+        font-size: 24px;
+        color: $purple;
+
+    }
+
+    &-text-1 {
+        color: $white;
+        font-weight: 700;
+        font-size: 82px;
+        margin-bottom: 20px;
+    }
+
+    &-text-2 {
+        color: $purple;
+        font-weight: 400;
+        font-size: 30px;
+    }
+
+    &-text-3 {
+        color: $grey;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    &-content {
+        padding-bottom: 600px;
+        margin-top: 300px;
+        @include column
+    }
+
+    &-button {
+        margin-top: 10px;
+        margin-left: 20px;
+        cursor: pointer;
+        width: 126px;
+        height: 35px;
+        background: $purple;
+        border: none;
+        border-radius: 40px;
+        color: $white;
+        font-weight: 700;
+        font-size: 16px;
+        position: absolute;
+        right: 0;
+
+    }
+
+    &-download {
+        width: 390px;
+        height: 62px;
+        background-color: $purple;
+        border-radius: 48px;
+        border: none;
+        color: $white;
+        font-weight: 700;
+        font-size: 21px;
+        position: relative;
+        left: calc(50% - 195px);
+        top: 30px;
+
+    }
+
+    &-download:hover {
+        cursor: pointer;
+        background-color: $white;
+        border: 1px solid #8D81AC;
+        color: #8D81AC;
+    }
+
+    &-menu-div {
+        position: absolute;
+        right: 13%;
+    }
+
+    &-dropdown {
+        display: none;
+        width: 40px;
+        height: 40px;
+
+        &-line1 {
+            position: relative;
+            left: 5px;
+            margin: 1px;
+            background-color: aliceblue;
+            width: 15px;
+            height: 3px;
+            border-radius: 5px;
+        }
+
+        &-line2 {
+
+            margin: 1px;
+            background-color: aliceblue;
+            width: 26px;
+            height: 3px;
+            border-radius: 5px;
+        }
+
+        &-line3 {
+
+            margin: 1px;
+            background-color: aliceblue;
+            width: 26px;
+            height: 3px;
+            border-radius: 5px;
+        }
+    }
+
+
+
+
+
+}
+
+
+
+@media screen and (max-width:$tab ) {
+    .fork-app {
+        &-download{
+        width: 290px;
+        height: 62px;
+        background-color: $purple;
+        border-radius: 48px;
+        border: none;
+        color: $white;
+        font-weight: 700;
+        font-size: 21px;
+        position: relative;
+        left: calc(50% - 145px);
+        top: 30px;
+        }
+        .container {
+            margin: 0 auto;
+
+        }
+
+        &-logo-img {
+            margin-left: 10px;
+        }
+
+
+        &-menu {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+
+            &-div {
+                position: static;
+                margin: auto;
+            }
+
+            li {
+                padding-left: 9px;
+                padding-right: 9px;
+                font-size: 16px;
+            }
+        }
+
+    }
+
+    .fork-app-header {
+        background-color: #27262A;
+        width: 100%;
+        min-height: 103px;
+
+
+    }
+
+
+
+
+
+}
+
+@media screen and (max-width:$mobile) {
+    .fork-app {
+        &-dropdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        &-logo-img {
+            margin-left: 10px;
+        }
+
+        &-text-1 {
+            font-size: 48px;
+        }
+
+        &-text-2 {
+            font-size: 18px;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        &-header {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        &-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-menu {
+            display: none;
+
+
+        }
+
+        &-logo-text {
+            display: none;
+        }
+
+        &-btn {
+            display: flex;
+            align-items: center;
+        }
+
+        &-button {
+
+            left: 10px;
+            margin: 0 auto;
+        }
+
+        .closed {
+
+            width: 40px;
+            height: 40px;
+
+            .fork-app-dropdown-line1 {
+                display: none;
+            }
+
+            .fork-app-dropdown-line2 {
+                position: relative;
+                top: 5px;
+                rotate: 45deg;
+                margin: 1px;
+                background-color: aliceblue;
+                width: 26px;
+                height: 3px;
+                border-radius: 5px;
+            }
+
+            .fork-app-dropdown-line3 {
+                rotate: -45deg;
+                margin: 1px;
+                background-color: aliceblue;
+                width: 26px;
+                height: 3px;
+                border-radius: 5px;
+            }
+        }
+
+        .open {
+            font-weight: 400;
+            font-size: 26px;
+            background-color: #333333;
+            left: 0;
+            display: block;
+            padding: 10px 0;
+            position: absolute;
+            width: 96%;
+            margin-left: 2%;
+
+            li {
+                color: $white;
+                font-weight: 400;
+                font-size: 26px;
+                border-bottom: 2px solid #3B3B3B;
+                text-align: left;
+                padding: 29px 0 21px 39px;
+            }
+        }
+
+        .fork-app-menu .fork-app-selected {
+            color: $purple;
+        }
+
+        .fork-app-selected::before {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 53px;
+            background: $purple;
+            position: absolute;
+            left: 2px;
+            top: 10px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}

@@ -1,0 +1,73 @@
+.fork {
+  background-image: url(../img/Layer1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: center;
+    padding: 0px 0px 118px;
+    gap: 87px;
+  }
+
+
+  &-item {
+    @include column;
+  }
+
+  &-image {
+    padding-bottom: 33px;
+  }
+&-bottom-text-wrapper{
+  display: flex;
+  justify-content: center;
+}
+  &-text {
+    font-family: 'Lato';
+    font-weight: $big-weight;
+    font-size: $title-size;
+    color: #FFFFFF;
+    line-height: 24px;
+    font-style: italic;
+  }
+
+  &-bottom-text {
+    position: relative;
+    @include centered;
+    color: #A291A5;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: $small-weight;
+    font-size: $text-size;
+    line-height: 21px;
+    max-width: 887px;
+    padding-bottom: 25px;
+   text-align: center;
+   
+  }
+
+  &-bottom-text::after {
+    position: absolute;
+    content: " ";
+    width: 90%;
+    height: 2px;
+    background-color: #645766;
+    bottom: 5px;
+  }
+  @media screen  and (max-width:$tab){
+    &-list{
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
+  @media screen and (max-width:$mobile){
+    &-list{
+      grid-template-columns:  1fr;
+      grid-template-rows: repeat(6, 1fr);
+      gap: 45px;
+      padding: 0px 0px 37px;
+    }
+  }
+}

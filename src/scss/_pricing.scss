@@ -1,0 +1,225 @@
+.pricing {
+    background-image: url(../img/Layer2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+
+
+
+    &-cards-pair {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+
+
+    &-cards {
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+
+
+    }
+
+    &-wrapper {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &-main-text {
+        font-weight: 700;
+        font-size: 48px;
+        color: $white;
+        text-align: center;
+
+    }
+
+    &-card {
+        position: relative;
+        margin-right: 20px;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 257px;
+        height: 457px;
+        background: rgb(255, 255, 255, 0.11);
+        color: $white;
+
+
+    }
+
+    &-card-selected {
+        .pricing-card-name {
+            padding: 43px 0px;
+        }
+
+        .pricing-card-info {
+            padding: 70px 0px;
+        }
+
+        button {
+            bottom: 50px;
+        }
+
+        width: 300px;
+        height: 560px;
+        background: rgb(70, 48, 72, 0.84);
+        color: $white;
+
+    }
+
+    &-card-name {
+        width: 100%;
+        background: rgb(255, 255, 255, 0.06);
+        padding: 36px 0px;
+        font-weight: 400;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &-card-price {
+        margin: 36px auto 20px;
+
+        font-weight: 700;
+        font-size: 60px;
+    }
+
+    &-card-month {
+        padding-bottom: 38px;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    &-card-month::after {
+        content: "";
+        display: block;
+        position: relative;
+        background-color: $purple;
+        width: 60px;
+        height: 5px;
+        top: 38px;
+        margin: auto;
+    }
+
+    &-card-info {
+        line-height: 1.2em;
+        text-align: center;
+        padding-top: 40px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    button {
+        position: absolute;
+        bottom: 36px;
+        color: #FFFFFF;
+        font-weight: 400;
+        font-size: 15px;
+        background: rgb(255, 255, 255, 0.15);
+        mix-blend-mode: normal;
+        width: 163px;
+        height: 45px;
+        border: none;
+        border-radius: 48px;
+    }
+}
+
+
+@media (max-width: 1280px) and (min-width:$tab) {
+    .pricing {
+        &-card {
+            max-width: 22vw;
+            margin-left: 0.8vw;
+            margin-right: 0.8vw;
+        }
+
+        &-card-selected {
+            max-width: 23.6vw;
+            width: 299px;
+
+        }
+    }
+}
+
+
+@media (max-width:$tab ) {
+    .container {
+        margin-top: 0;
+    }
+
+    .pricing {
+
+        &-card {
+            width: 257px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        &-cards {
+            display: flex;
+            flex-direction: column;
+
+        }
+        &-card-selected {
+            width: 300px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+
+}
+
+
+@media (max-width: 596px) and (min-width:$mobile) {
+    .pricing {
+        &-card {
+            width: 230px;
+            max-width: 42vw;
+            margin-left: 0.5vw;
+            margin-right: 0.5vw;
+            
+        }
+
+        &-card-selected {
+            max-width: 45vw;
+            width: 300px;
+        }
+
+        
+    }
+}
+
+@media (max-width:$mobile ) {
+    .pricing {
+        &-main-text {
+            font-size: 28px;
+            text-align: center;
+        }
+
+
+        &-cards-pair {
+            display: flex;
+            flex-direction: column;
+
+            .pricing-card {
+                margin-top: 30px;
+            }
+        }
+        &-card-selected {
+            width: 300px;
+            
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+}
